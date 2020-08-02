@@ -38,7 +38,9 @@ function CadastroCategoria() {
   };
 
   useEffect(() => {
-    const url = 'http://localhost:3333/categories';
+    const url = window.location.hostname.includes('localhost')
+      ? 'http://localhost:3333'
+      : 'https://omenflix.herokuapp.com/categories';
     fetch(url)
       .then(async (data) => {
         const json = await data.json();
