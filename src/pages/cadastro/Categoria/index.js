@@ -12,7 +12,7 @@ function CadastroCategoria() {
   const initialCategory = {
     name: '',
     description: '',
-    color: '#219653',
+    color: '#6e83d2',
   };
 
   const [categoryData, setCategoryData] = useState(initialCategory);
@@ -39,7 +39,7 @@ function CadastroCategoria() {
 
   useEffect(() => {
     const url = window.location.hostname.includes('localhost')
-      ? 'http://localhost:3333'
+      ? 'http://localhost:3333/categories'
       : 'https://omenflix.herokuapp.com/categories';
     fetch(url)
       .then(async (data) => {
