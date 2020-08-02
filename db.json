@@ -1,0 +1,16 @@
+{
+	"categories": [
+		{
+			"id": 1,
+			"name": "Front-end",
+			"description": "Para os devs artistas",
+			"color": "#cbd1ff"
+		},
+		{
+			"id": 2,
+			"name": "Back-end",
+			"description": "Para os devs gênios do raciocínio lógico",
+			"color": "#b4gg11"
+		}
+	]
+}

@@ -1,0 +1,128 @@
+{
+  "categorias": [
+    {
+      "titulo": "Games",
+      "cor": "#EB5757",
+      "videos": [
+        {
+          "titulo": "VALORANT: VAZARAM as habilidades de KILLJOY, o NOVO AGENTE!",
+          "url": "https://www.youtube.com/watch?v=nXz-oEhR9OY"
+        },
+        {
+          "titulo": "Final Fantasy XII: The Zodiac Age - 10 Minutes of Gameplay [HD]",
+          "url": "https://www.youtube.com/watch?v=kNluu5Ab2PA"
+        },
+        {
+          "titulo": "Guia Para Iniciantes em Final Fantasy Tactics - #1 Job Points e Experiência",
+          "url": "https://www.youtube.com/watch?v=8pfmLtPetxs"
+        },
+        {
+          "titulo": "Kin of the Stained Blade | Spirit Blossom 2020 Cinematic - League of Legends",
+          "url": "https://www.youtube.com/watch?v=D4L0OkSrsI8"
+        },
+        {
+          "titulo": "Campeã em Destaque: Lillia | Mecânica de jogo - League of Legends",
+          "url": "https://www.youtube.com/watch?v=0BoSAz2OJdw"
+        },
+        {
+          "titulo": "MELHOR ARQUEIRA DO MEU BAIRRO - VALORANT",
+          "url": "https://www.youtube.com/watch?v=8cxC3g9JX3g"
+        },
+        {
+          "titulo": "Don't Starve - 5 Dicas Úteis (Objetivo)",
+          "url": "https://www.youtube.com/watch?v=ZJ-ydcOrlNI"
+        }     
+      ]
+    },
+    {
+      "titulo": "Tecnologia",
+      "cor": "#F2994A",
+      "videos": [
+        {
+          "titulo": "Seja um Programador Melhor: 10 Repositórios SENSACIONAIS no GitHub (tudo Open Source!)",
+          "url": "https://www.youtube.com/watch?v=vGQSG_YnTOw"
+        },
+        {
+          "titulo": "Flutter vs React Native - Will Flutter Kill React Native?",
+          "url": "https://www.youtube.com/watch?v=uxZZzmeCoLE"
+        },
+        {
+          "titulo": "Mais 80 ideias para Aprender a Programar (incluindo gerar renda com Anúncios)",
+          "url": "https://www.youtube.com/watch?v=H4CCPaYLTWg"
+        },
+        {
+          "titulo": "Como Virar Programador",
+          "url": "https://www.youtube.com/watch?v=R6NCG9gqcX0"
+        },
+        {
+          "titulo": "O Git que será cobrado no seu 1º dia de trabalho - DevMedia",
+          "url": "https://www.youtube.com/watch?v=SQsR0KA-oew"
+        }, 
+        {
+          "titulo": "Desafio: 10 projetos rápidos para treinar Programação e conseguir um Emprego",
+          "url": "https://www.youtube.com/watch?v=fYR9L2ZmodM&t=18s"
+        }
+      ]
+    },
+    {
+      "titulo": "Séries",
+      "cor": "#F2C94C",
+      "videos": [
+        {
+          "titulo": "Stranger Things | Official Final Trailer | Netflix",
+          "url": "https://www.youtube.com/watch?v=b9EkMc79ZSU"
+        },
+        {
+          "titulo": "Anne | Trailer principal | Netflix [HD]",
+          "url": "https://www.youtube.com/watch?v=bBervTlBurY"
+        },
+        {
+          "titulo": "O Mundo Sombrio de Sabrina | Trailer oficial [HD] | Netflix",
+          "url": "https://www.youtube.com/watch?v=c1N3tpnmy-c"
+        },
+        {
+          "titulo": "13 Reasons Why: Temporada 3 | Trailer oficial | Netflix",
+          "url": "https://www.youtube.com/watch?v=p3Q1IjfBIm0"
+        },
+        {
+          "titulo": "The 100 Trailer",
+          "url": "https://www.youtube.com/watch?v=ia1Fbg96vL0"
+        },
+        {
+          "titulo": "La Casa de Papel | Tráiler de la serie | Netflix",
+          "url": "https://www.youtube.com/watch?v=To_kVMMu-Ls"
+        }
+      ]
+    },
+    {
+      "titulo": "Filmes",
+      "cor": "#219653",
+      "videos": [
+        {
+          "titulo": "Interestellar",
+          "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
+        },
+        {
+          "titulo": "Um Olhar do Paraíso",
+          "url": "https://www.youtube.com/watch?v=PGXJT61Y6Mc"
+        },
+        {
+          "titulo": "Babadook",
+          "url": "https://www.youtube.com/watch?v=k5WQZzDRVtw"
+        },
+        {
+          "titulo": "A Chegada",
+          "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
+        },
+        {
+          "titulo": "Edward Mãos de Tesoura",
+          "url": "https://www.youtube.com/watch?v=4XKjYC-_GJM"
+        },
+        {
+          "titulo": "Beetlejuice",
+          "url": "https://www.youtube.com/watch?v=ickbVzajrk0"
+        }
+      ]
+    }
+  ]
+}
