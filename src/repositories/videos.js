@@ -9,11 +9,11 @@ function createVideo(videoData) {
   })
     .then((response) => {
       // eslint-disable-next-line no-console
-      console.log(response);
+      console.log('Video added successfully.');
     })
     .catch((error) => {
       // eslint-disable-next-line no-console
-      console.log(error);
+      console.log('Something went wrong.. :(');
     });
 }
 

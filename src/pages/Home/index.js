@@ -12,6 +12,7 @@ function Home() {
   useEffect(() => {
     categoryRepository.getAllWithVideos()
       .then((data) => {
+        console.log(data);
         setCategories(data);
       });
   }, []);
