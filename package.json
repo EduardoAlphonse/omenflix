@@ -17,8 +17,8 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "server": "nodemon server.js",
-    "dev": "concurrently \"react-scripts start\" \"yarn server\"",
+    "server": "node server.js",
+    "dev": "concurrently \"react-scripts start\" \"nodemon server.js\"",
     "start": "yarn server",
     "build": "react-scripts build",
     "test": "react-scripts test",
