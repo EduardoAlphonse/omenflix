@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Notícias",
-      "color": "#6BD1FF",
+      "color": "#EB5757",
       "link_extra": {
         "text": "Notícias e informações sobre as atualizações.",
         "url": "#"
@@ -19,31 +19,13 @@
       }
     },
     {
-      "id": 3,
-      "name": "Data Science e Inteligência Artificial",
-      "color": "#9cd33b",
+      "name": "300 IQ Plays",
+      "color": "#ff9900",
       "link_extra": {
-        "text": "Cursos de Data Science na Alura",
-        "url": "https://www.alura.com.br/cursos-online-mobile"
-      }
-    },
-    {
-      "id": 4,
-      "name": "Filmes",
-      "color": "orange",
-      "link_extra": {
-        "text": "Filmes favoritos",
-        "url": "https://www.netflix.com/br/"
-      }
-    },
-    {
-      "id": 5,
-      "name": "Games",
-      "color": "red",
-      "link_extra": {
-        "text": "Formação de Jogos na Alura",
-        "url": "https://www.alura.com.br/cursos-online-front-end"
-      }
+        "text": "Vídeos de jogadas impressionantes! 🔥",
+        "url": "#"
+      },
+      "id": 3
     }
   ],
   "videos": [
@@ -142,6 +124,42 @@
       "url": "https://www.youtube.com/watch?v=j6RWS6MH-ng",
       "categoryId": 1,
       "id": 19
+    },
+    {
+      "title": "Nova ATUALIZAÇÃO - Patch 1.05 e ATO 2 | Valorant Notícias",
+      "url": "https://www.youtube.com/watch?v=Sj1ziXftVZE",
+      "categoryId": 1,
+      "id": 20
+    },
+    {
+      "title": "VALORANT : 10 MINUTES OF 200 IQ PLAYS",
+      "url": "https://www.youtube.com/watch?v=Yjey_Ex02mI",
+      "categoryId": 3,
+      "id": 21
+    },
+    {
+      "title": "Valorant: UNBELIEVABLE 1 in 10,000 Moments! - 300IQ Plays & OP Moments - Valorant Highlights Montage",
+      "url": "https://www.youtube.com/watch?v=3WG2n_KQmnE",
+      "categoryId": 3,
+      "id": 22
+    },
+    {
+      "title": "Valorant: TOP 100 *NEW* INSANE VIRAL PLAYS - 200IQ Tricks & Outplays - Valorant Highlights Montage",
+      "url": "https://www.youtube.com/watch?v=o2b3NhptNKI",
+      "categoryId": 3,
+      "id": 23
+    },
+    {
+      "title": "THE ULTIMATE VIPER MONTAGE - 200 IQ Tricks & Outplays | VALORANT",
+      "url": "https://www.youtube.com/watch?v=zMndzjuH-Gs",
+      "categoryId": 3,
+      "id": 24
+    },
+    {
+      "title": "ALORANT - WHEN PLAYERS HAVE 200 IQ (Smartest Plays)",
+      "url": "https://www.youtube.com/watch?v=qrsn6NeNjkQ",
+      "categoryId": 3,
+      "id": 25
     }
   ]
 }

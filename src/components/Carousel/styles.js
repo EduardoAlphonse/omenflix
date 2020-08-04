@@ -1,25 +1,44 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Title = styled.h3`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 35px;
-  line-height: 1;
-  margin-bottom: 16px;
+export const TitleContainer = styled.div`
+  position: relative;
   display: inline-block;
-  padding: 20px;
-  background: red;
-  line-height: 1;
-  border-radius: 4px;
+  height: auto;
+`;
+
+export const TitleStyle = styled.div`
+  position: relative;
+  left: 0;
+  bottom: 15px;
+  ${({ bgColor }) => css`
+    background-color: ${bgColor};
+  `};
+
+  width: 120%;
+  height: 20px;
 
   @media (max-width: 800px) {
+    height: 10px;
+    bottom: 10px;
+  }
+`;
+
+export const TitleLabel = styled.span`
+  position: relative;
+  z-index: 1;
+  font-family: 'Lato';
+  font-weight: 500;
+  font-size: 30px;
+  margin-left: 10px;
+  
+  @media (max-width: 800px) {
     font-size: 18px;
-    padding: 10px;
+    margin-left: 5px;
   }
 `;
 
 export const ExtraLink = styled.a`
-  margin-left: 16px;
+  margin-left: 46px;
   text-decoration: none;
   transition: opacity .3s;
   &:hover,
@@ -33,23 +52,10 @@ export const ExtraLink = styled.a`
   }
 `;
 
-// export const VideoCardList = styled.ul`
-//   margin: 0;
-//   padding-left: 0;
-//   padding-bottom: 32px;
-//   list-style: none;
-//   display: flex;
-//   overflow-x: auto;
-//   flex-direction: row;
-  
-//   li {
-//     margin-right: 16px;
-//   }
-// `;
-
 export const VideoCardGroupContainer = styled.section`
   color: white;
   min-height: 197px;
+  margin-top: 40px;
   margin-left: 5%;
   margin-bottom: 16px;
 `;

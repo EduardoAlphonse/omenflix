@@ -1,8 +1,26 @@
 import styled from 'styled-components';
 
+export const VideoLabelContainer = styled.div`
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 35px;
+  background-color: ${({ categoryColor }) => categoryColor};
+`;
+
+export const VideoLabel = styled.span`
+  position: absolute;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  white-space: nowrap;
+  padding: 5px;
+
+  transition: transform 5s linear;
+`;
+
 export const VideoCardContainer = styled.a`
-  border: 2px solid;
-  border-radius: 4px;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
@@ -13,34 +31,16 @@ export const VideoCardContainer = styled.a`
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
   background-position: center;
-  border-radius: 10px;
   position: relative;
   display: flex;
   align-items: flex-end;
-  padding: 16px;
 
-  transition: opacity .3s;
-  &:hover,
-  &:focus {
-    opacity: .5;
+  &:hover ${VideoLabel},
+  &:focus ${VideoLabel} {
+    transform: translateX(calc(-1 * (100% - 298px)));
   }
 
-  & span {
-    opacity: 2;
-  }
-  
   &:not(:first-child) {
     margin-left: 20px;
   }
-`;
-
-export const SpanContainer = styled.span`
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  padding: 10px;
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
 `;

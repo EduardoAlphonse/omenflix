@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
+import {
+  VideoCardGroupContainer, ExtraLink, TitleContainer, TitleStyle, TitleLabel,
+} from './styles';
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
 
@@ -15,14 +17,15 @@ function Carousel({
     <VideoCardGroupContainer>
       {name && (
         <>
-          <Title style={{ backgroundColor: color || 'red' }}>
-            {name}
-          </Title>
+          <TitleContainer>
+            <TitleLabel>{name.toUpperCase()}</TitleLabel>
+            <TitleStyle bgColor={color || 'red'} />
+          </TitleContainer>
           {url
             && (
-            <ExtraLink href={url} target="_blank">
-              {text}
-            </ExtraLink>
+              <ExtraLink href={url} target="_blank">
+                {text}
+              </ExtraLink>
             )}
         </>
       )}

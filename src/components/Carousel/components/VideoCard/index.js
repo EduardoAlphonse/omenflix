@@ -1,5 +1,5 @@
 import React from 'react';
-import { VideoCardContainer, SpanContainer } from './styles';
+import { VideoCardContainer, VideoLabel, VideoLabelContainer } from './styles';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL
@@ -9,7 +9,6 @@ function getYouTubeId(youtubeURL) {
     );
 }
 
-
 function VideoCard({ videoTitle, videoURL, categoryColor }) {
   const image = `https://img.youtube.com/vi/${getYouTubeId(videoURL)}/hqdefault.jpg`;
   return (
@@ -17,12 +16,14 @@ function VideoCard({ videoTitle, videoURL, categoryColor }) {
       url={image}
       href={videoURL}
       target="_blank"
-      style={{ borderColor: categoryColor || 'red' }}
       title={videoTitle}
     >
-      <SpanContainer>
-        {videoTitle.length > 30 ? videoTitle.slice(0, 27) + '...' : videoTitle}
-      </SpanContainer>
+      <VideoLabelContainer categoryColor={categoryColor}>
+        <VideoLabel>
+          {/* {videoTitle.length > 30 ? `${videoTitle.slice(0, 27)}...` : videoTitle} */}
+          {videoTitle}
+        </VideoLabel>
+      </VideoLabelContainer>
     </VideoCardContainer>
   );
 }

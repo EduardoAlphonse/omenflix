@@ -11,12 +11,14 @@ import categoriesRepository from '../../../repositories/categories';
 
 function CadastroVideo() {
   const [categories, setCategories] = useState([]);
+  const categoryTitles = categories.map(({ name }) => name);
 
   const { values, handleChange } = useForm({
-    title: 'Última aula da imersão',
-    url: 'https://youtu.be/hhQ3RtvmfEg',
-    category: '1',
+    title: '',
+    url: '',
+    category: '',
   });
+
   const history = useHistory();
 
   const handleForm = (e) => {
@@ -43,7 +45,7 @@ function CadastroVideo() {
 
   return (
     <PageDefault>
-      <h1>Rota de cadastro de vídeo.</h1>
+      <h1>Adicionar vídeo.</h1>
 
       <form onSubmit={handleForm}>
         <FormField
@@ -68,10 +70,11 @@ function CadastroVideo() {
           value={values.category}
           label="Categoria"
           onChange={handleChange}
+          suggestions={categoryTitles}
         />
 
         <Button style={{ color: '#575757' }}>
-          Cadastrar
+          Cadastrar vídeo
         </Button>
       </form>
 

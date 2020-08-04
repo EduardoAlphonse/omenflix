@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 import PageDefault from '../../../components/PageDefault';
@@ -20,9 +20,23 @@ function CadastroCategoria() {
 
   const { values, handleChange, clearForm } = useForm(initialValues);
 
+  const history = useHistory();
+
   const handleForm = (e) => {
     e.preventDefault();
-    setCategories([...categories, values]);
+
+    categoryRepository.createCategory({
+      name: values.name,
+      color: values.color,
+      link_extra: {
+        text: values.description,
+        url: '#',
+      },
+    })
+      .then(() => {
+        history.push('/');
+      });
+
     clearForm();
   };
 
@@ -36,7 +50,7 @@ function CadastroCategoria() {
   return (
     <PageDefault>
       <h1>
-        Cadastro de categoria:
+        Adicionar categoria:
         <CategoryName style={{ color: values.color }}>
           {values.name}
         </CategoryName>
@@ -68,7 +82,7 @@ function CadastroCategoria() {
         />
 
         <Button style={{ color: '#575757' }}>
-          Cadastrar
+          Cadastrar categoria
         </Button>
       </form>
 

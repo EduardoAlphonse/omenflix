@@ -26,7 +26,26 @@ function getAllWithVideos() {
     });
 }
 
+function createCategory(categoryData) {
+  return fetch(URL_CATEGORIES, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(categoryData),
+  })
+    .then(async (data) => {
+      if (data.ok) {
+        const json = await data.json();
+        return json;
+      }
+
+      throw new Error('Não foi possível obter os dados =[');
+    });
+}
+
 export default {
   getAll,
   getAllWithVideos,
+  createCategory,
 };
