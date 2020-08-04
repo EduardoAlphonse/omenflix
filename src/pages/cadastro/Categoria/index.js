@@ -6,45 +6,30 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 
+import useForm from '../../../hooks/useForm';
+import categoryRepository from '../../../repositories/categories';
+
 function CadastroCategoria() {
   const [categories, setCategories] = useState([]);
 
-  const initialCategory = {
+  const initialValues = {
     name: '',
     description: '',
     color: '#6e83d2',
   };
 
-  const [categoryData, setCategoryData] = useState(initialCategory);
-
-  const setValue = (key, value) => {
-    setCategoryData({
-      ...categoryData,
-      [key]: value,
-    });
-  };
+  const { values, handleChange, clearForm } = useForm(initialValues);
 
   const handleForm = (e) => {
     e.preventDefault();
-    setCategories([...categories, categoryData]);
-    setCategoryData(initialCategory);
-  };
-
-  const handleChange = (e) => {
-    setValue(
-      e.target.getAttribute('name'),
-      e.target.value,
-    );
+    setCategories([...categories, values]);
+    clearForm();
   };
 
   useEffect(() => {
-    const url = window.location.hostname.includes('localhost')
-      ? 'http://localhost:3333/categories'
-      : 'https://omenflix.herokuapp.com/categories';
-    fetch(url)
-      .then(async (data) => {
-        const json = await data.json();
-        setCategories([...json]);
+    categoryRepository.getAllWithVideos()
+      .then((data) => {
+        setCategories([...data]);
       });
   }, []);
 
@@ -52,8 +37,8 @@ function CadastroCategoria() {
     <PageDefault>
       <h1>
         Cadastro de categoria:
-        <CategoryName style={{ color: categoryData.color }}>
-          {categoryData.name}
+        <CategoryName style={{ color: values.color }}>
+          {values.name}
         </CategoryName>
       </h1>
 
@@ -61,7 +46,7 @@ function CadastroCategoria() {
         <FormField
           name="name"
           type="text"
-          value={categoryData.name}
+          value={values.name}
           label="Nome da categoria"
           onChange={handleChange}
         />
@@ -69,7 +54,7 @@ function CadastroCategoria() {
         <FormField
           name="description"
           type="textarea"
-          value={categoryData.description}
+          value={values.description}
           label="Descrição"
           onChange={handleChange}
         />
@@ -77,7 +62,7 @@ function CadastroCategoria() {
         <FormField
           name="color"
           type="color"
-          value={categoryData.color}
+          value={values.color}
           label="Cor"
           onChange={handleChange}
         />

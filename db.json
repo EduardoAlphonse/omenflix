@@ -1,16 +1,147 @@
 {
-	"categories": [
-		{
-			"id": 1,
-			"name": "Front-end",
-			"description": "Para os devs artistas",
-			"color": "#cbd1ff"
-		},
-		{
-			"id": 2,
-			"name": "Back-end",
-			"description": "Para os devs gênios do raciocínio lógico",
-			"color": "#b4gg11"
-		}
-	]
+  "categories": [
+    {
+      "id": 1,
+      "name": "Notícias",
+      "color": "#6BD1FF",
+      "link_extra": {
+        "text": "Notícias e informações sobre as atualizações.",
+        "url": "#"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Agentes",
+      "color": "#00C86F",
+      "link_extra": {
+        "text": "Apresentação e explicação dos agentes de Valorant.",
+        "url": "How To Play JETT Guide (VALORANT Abilities)"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Data Science e Inteligência Artificial",
+      "color": "#9cd33b",
+      "link_extra": {
+        "text": "Cursos de Data Science na Alura",
+        "url": "https://www.alura.com.br/cursos-online-mobile"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Filmes",
+      "color": "orange",
+      "link_extra": {
+        "text": "Filmes favoritos",
+        "url": "https://www.netflix.com/br/"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Games",
+      "color": "red",
+      "link_extra": {
+        "text": "Formação de Jogos na Alura",
+        "url": "https://www.alura.com.br/cursos-online-front-end"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "title": "Apresentando Killjoy// Trailer de Revelação de Agente - VALORANT",
+      "url": "https://www.youtube.com/watch?v=FXBijyrpVAM"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "title": "TUDO SOBRE A NOVA AGENTE KILLJOY, BUFFS E NERFS DOS PRÓXIMOS PATCHS | Valorant Notícias",
+      "url": "https://www.youtube.com/watch?v=UrBfV1bL1Ng"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "title": "NERF NA SAGE E RAZE CHEGANDO EM BREVE! | Valorant Noticias | Plantão Coorujão",
+      "url": "https://www.youtube.com/watch?v=aca3CCAIHOs"
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "title": "MUDANÇAS DOS AGENTES PARA OS PRÓXIMOS PATCHS, NERF NA OPERATOR, NERF NA JUDGE | Valorant Notícias",
+      "url": "https://www.youtube.com/watch?v=6dwHVFCEFcI&t=5s"
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "title": "Como jogar de JETT no VALORANT",
+      "url": "https://www.youtube.com/watch?v=bpa5uTIb3ac"
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "title": "Como jogar de RAZE no VALORANT",
+      "url": "https://www.youtube.com/watch?v=-EFgrVxuiIE"
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "title": "Como jogar de BREACH no VALORANT",
+      "url": "https://www.youtube.com/watch?v=I86QkE11srE"
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "title": "Como jogar de OMEN no VALORANT",
+      "url": "https://www.youtube.com/watch?v=UgSf9EdIn1k"
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "title": "Como jogar de BRIMSTONE no VALORANT",
+      "url": "https://www.youtube.com/watch?v=6pIy2AtFQ8E"
+    },
+    {
+      "id": 13,
+      "categoryId": 2,
+      "title": "Como jogar de PHOENIX no VALORANT",
+      "url": "https://www.youtube.com/watch?v=XUtbpxBSYqU"
+    },
+    {
+      "id": 14,
+      "categoryId": 2,
+      "title": "Como jogar de SAGE no VALORANT",
+      "url": "https://www.youtube.com/watch?v=65WWbAN1RLI"
+    },
+    {
+      "id": 15,
+      "categoryId": 2,
+      "title": "Como jogar de SOVA no VALORANT",
+      "url": "https://www.youtube.com/watch?v=8F-6OqJfqWw"
+    },
+    {
+      "id": 16,
+      "categoryId": 2,
+      "title": "Como jogar de VIPER no VALORANT",
+      "url": "https://www.youtube.com/watch?v=Us_lcJ7QIcc"
+    },
+    {
+      "id": 17,
+      "categoryId": 2,
+      "title": "Como jogar de CYPHER no VALORANT",
+      "url": "https://www.youtube.com/watch?v=ux70ldqMsy0"
+    },
+    {
+      "id": 18,
+      "categoryId": 2,
+      "title": "Como jogar de REYNA no VALORANT",
+      "url": "https://www.youtube.com/watch?v=eTm69ll7KO4"
+    },
+    {
+      "title": "HABILIDADES DA KILLJOY EXPLICADAS, NERF NA SAGE E NA RAZE EXPLICADOS!",
+      "url": "https://www.youtube.com/watch?v=j6RWS6MH-ng",
+      "categoryId": 1,
+      "id": 19
+    }
+  ]
 }

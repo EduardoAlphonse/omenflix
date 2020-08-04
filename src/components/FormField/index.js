@@ -63,7 +63,7 @@ const Input = styled.input`
 `;
 
 export default function FormField({
-  onChange, name, type, label, value,
+  onChange, name, type, label, value, suggestions,
 }) {
   const fieldId = `id_${name} `;
 
@@ -95,6 +95,10 @@ FormField.defaultProps = {
   type: 'text',
   value: '',
   onChange: () => { },
+  suggestions: [
+    'Front End',
+    'Back end',
+  ],
 };
 
 FormField.propTypes = {
@@ -103,4 +107,5 @@ FormField.propTypes = {
   name: PropTypes.string.isRequired,
   value: PropTypes.string,
   onChange: PropTypes.func,
+  suggestions: 
 };

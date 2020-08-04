@@ -1,5 +1,5 @@
 {
-  "name": "duflix",
+  "name": "omenflix",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +16,7 @@
     "styled-components": "^5.1.1"
   },
   "scripts": {
-    "server": "node server.js",
+    "server": "nodemon server.js",
     "dev": "concurrently \"react-scripts start\" \"yarn server\"",
     "start": "yarn server",
     "build": "react-scripts build",

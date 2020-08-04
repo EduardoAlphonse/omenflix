@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
@@ -7,22 +8,22 @@ function Carousel({
   ignoreFirstVideo,
   category,
 }) {
-  const categoryTitle = category.titulo;
-  const categoryColor = category.cor;
-  const categoryExtraLink = category.link_extra;
-  const videos = category.videos;
+  const {
+    name, color, link_extra: { text, url }, videos,
+  } = category;
   return (
     <VideoCardGroupContainer>
-      {categoryTitle && (
+      {name && (
         <>
-          <Title style={{ backgroundColor: categoryColor || 'red' }}>
-            {categoryTitle}
+          <Title style={{ backgroundColor: color || 'red' }}>
+            {name}
           </Title>
-          {categoryExtraLink && 
-            <ExtraLink href={categoryExtraLink.url} target="_blank">
-              {categoryExtraLink.text}  
+          {url
+            && (
+            <ExtraLink href={url} target="_blank">
+              {text}
             </ExtraLink>
-          }
+            )}
         </>
       )}
       <Slider>
@@ -32,11 +33,12 @@ function Carousel({
           }
 
           return (
-            <SliderItem key={video.titulo}>
+            // eslint-disable-next-line react/no-array-index-key
+            <SliderItem key={`${video.title}${index}`}>
               <VideoCard
-                videoTitle={video.titulo}
+                videoTitle={video.title}
                 videoURL={video.url}
-                categoryColor={categoryColor}
+                categoryColor={color}
               />
             </SliderItem>
           );

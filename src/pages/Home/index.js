@@ -1,42 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import Menu from '../../components/Menu';
 import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
-import Footer from '../../components/Footer';
+import PageDefault from '../../components/PageDefault';
 
-import dadosIniciais from '../../data/dados_iniciais.json';
+import categoryRepository from '../../repositories/categories';
 
 function Home() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    categoryRepository.getAllWithVideos()
+      .then((data) => {
+        setCategories(data);
+      });
+  }, []);
+
   return (
-    <div style={{ background: "#0E0E0E" }}>
-      <Menu />
+    <PageDefault paddingAll={0}>
 
-      <BannerMain
-        videoTitle={dadosIniciais.categorias[0].videos[0].titulo}
-        url={dadosIniciais.categorias[0].videos[0].url}
-        videoDescription={"Habilidades do novo Agente, KillJoy! A sua ultimate é uma Spike debilitante!"}
-      />
+      {categories.length === 0 && (<div>Carregando categorias...</div>)}
 
-      <Carousel
-        ignoreFirstVideo
-        category={dadosIniciais.categorias[0]}
-      />
+      {categories.length >= 1 && (
+        <>
+          <BannerMain
+            videoTitle={categories[0].videos[0].title}
+            url={categories[0].videos[0].url}
+            videoDescription="Habilidades do novo Agente, KillJoy! A sua ultimate é uma Spike debilitante!"
+          />
+        </>
+      )}
 
-      <Carousel
-        category={dadosIniciais.categorias[1]}
-      />
-
-      <Carousel
-        category={dadosIniciais.categorias[2]}
-      />
-
-      <Carousel
-        category={dadosIniciais.categorias[3]}
-      />
-      
-      <Footer />
-    </div>
+      {
+        categories.map((category, index) => (
+          <Carousel
+            key={`${category.name}`}
+            ignoreFirstVideo={!index}
+            category={category}
+          />
+        ))
+      }
+    </PageDefault>
   );
 }
 
