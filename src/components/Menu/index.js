@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import Logo from '../../assets/images/omenflix_logo.png';
+import Logo from '../../assets/images/omenflix_logotypo.png';
 import Button from '../Button';
 
 import plusIcon from '../../assets/icons/plus_icon.svg';
