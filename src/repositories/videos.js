@@ -1,22 +1,19 @@
+import axios from 'axios';
 import config from '../config';
 
 const URL_VIDEOS = `${config.URL_BACKEND}/videos`;
 
 function createVideo(videoData) {
-  return fetch(URL_VIDEOS, {
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json',
-    },
-    body: JSON.stringify(videoData),
+  return axios.post(URL_VIDEOS, {
+    videoData,
   })
-    .then(async (data) => {
-      if (data.ok) {
-        const json = await data.json();
-        return json;
-      }
-
-      throw new Error('Não foi possível obter os dados =[');
+    .then((response) => {
+      // eslint-disable-next-line no-console
+      console.log(response);
+    })
+    .catch((error) => {
+      // eslint-disable-next-line no-console
+      console.log(error);
     });
 }
 

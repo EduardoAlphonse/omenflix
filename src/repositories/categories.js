@@ -1,46 +1,29 @@
+import axios from 'axios';
 import config from '../config';
 
 const URL_CATEGORIES = `${config.URL_BACKEND}/categories`;
 
 function getAll() {
-  return fetch(URL_CATEGORIES)
-    .then(async (data) => {
-      if (data.ok) {
-        const json = await data.json();
-        return json;
-      }
-
-      throw new Error('Não foi possível obter os dados =[');
-    });
+  return axios.get(URL_CATEGORIES)
+    .then((response) => response.data);
 }
 
 function getAllWithVideos() {
-  return fetch(`${URL_CATEGORIES}?_embed=videos`)
-    .then(async (data) => {
-      if (data.ok) {
-        const json = await data.json();
-        return json;
-      }
-
-      throw new Error('Não foi possível obter os dados =[');
-    });
+  return axios.get(`${URL_CATEGORIES}?_embed=videos`)
+    .then((response) => response.data);
 }
 
 function createCategory(categoryData) {
-  return fetch(URL_CATEGORIES, {
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json',
-    },
-    body: JSON.stringify(categoryData),
+  return axios.post(URL_CATEGORIES, {
+    ...categoryData,
   })
-    .then(async (data) => {
-      if (data.ok) {
-        const json = await data.json();
-        return json;
-      }
-
-      throw new Error('Não foi possível obter os dados =[');
+    .then((response) => {
+      // eslint-disable-next-line no-console
+      console.log('Request successsful.');
+    })
+    .catch((error) => {
+      console.log('Something went wrong :(');
+      console.log(error);
     });
 }
 
