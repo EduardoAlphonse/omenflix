@@ -34,7 +34,7 @@ function Home() {
       {
         categories.map((category, index) => (
           <Carousel
-            key={`${category.name}`}
+            key={category.name}
             ignoreFirstVideo={!index}
             category={category}
           />

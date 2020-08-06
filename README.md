@@ -6,9 +6,9 @@ clone este repositório, entre na pasta e use:
 
 após a instalação das dependências, inicie a aplicação com:
 
-`npm start`ou `yarn start`
+`npm run dev`ou `yarn dev`
 
 ---
 
 Veja a aplicação online aqui:
-https://duflix.vercel.app/
+https://omenflix.vercel.app/
