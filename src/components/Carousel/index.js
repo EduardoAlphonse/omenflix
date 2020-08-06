@@ -35,9 +35,10 @@ function Carousel({
             return null;
           }
 
+          const videoIndex = index;
+
           return (
-            // eslint-disable-next-line react/no-array-index-key
-            <SliderItem key={`${video.title}${index}`}>
+            <SliderItem key={`${video.title}${videoIndex}`}>
               <VideoCard
                 videoTitle={video.title}
                 videoURL={video.url}
